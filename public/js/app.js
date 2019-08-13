@@ -1,7 +1,3 @@
-console.log('uwu')
-
-
-
 const weatherForm = document.querySelector('form')
 const search = weatherForm.querySelector('input')
 const messageOne = document.querySelector('#message-1')
