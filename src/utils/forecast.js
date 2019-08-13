@@ -10,7 +10,7 @@ const forecast = (latitude, longitude, callback) => {
     }else{
       const daily = body.daily
       const currently = body.currently
-      const text = `${daily.summary} It is currently ${currently.temperature}. There is a ${Math.floor(currently.precipProbability*100)}% chance of rain.`
+      const text = `${daily.summary} It is currently ${currently.temperature}. There is a ${Math.floor(currently.precipProbability*100)}% chance of rain and humidity is at ${Math.floor(currently.humidity*100)}%.`
       callback(undefined, text)
     }
   })
