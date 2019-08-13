@@ -5,6 +5,7 @@ const geocode = require('./utils/geocode')
 const forecast = require('./utils/forecast')
 
 const app = express()
+const port = process.env.PORT || 3000
 
 // Define Paths for Express Configs
 const pubPath = path.join(__dirname, '../public')
@@ -99,6 +100,6 @@ app.get('*', (req, res) => {
   // res.send('404: uwu cant be found')
 })
 
-app.listen(3000, () => {
-  console.log('Server up at http://localhost:3000')
+app.listen(port, () => {
+  console.log(`Server up at port ${port}`)
 })
